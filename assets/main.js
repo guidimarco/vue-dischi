@@ -1,16 +1,17 @@
 var app = new Vue({ // VUE INSTANCE
     el: "#wrapper",
     data: {
-        // VAR
-
-        // OBJ
-
-        // ARRAY
+        discs: [],
     },
     methods: {
 
     },
     mounted() {
-        console.log("prova");
+        axios // GET discs from API boolean
+            .get("https://flynn.boolean.careers/exercises/api/array/music")
+            .then( (discsObj) => {
+                this.discs = discsObj.data.response;
+            })
+        ;
     },
 });

@@ -154,13 +154,14 @@
                             </h3>
 
                             <div class="card-container">
-                                <div class="card">
-                                    <img src="https://s.mxmcdn.net/images-storage/albums5/5/5/9/6/1/0/35016955_350_350.jpg" alt="drapth">
+                                <div class="card" v-for="disc in discs">
+                                    <img :src="disc.poster" :alt="disc.title">
                                     <h4>
-                                        title
+                                        {{ disc.title }}
                                     </h4>
                                     <span>
-                                        Autore, album e anno
+                                        {{ disc.author }},
+                                        {{ disc.year }}
                                     </span>
                                 </div>
 

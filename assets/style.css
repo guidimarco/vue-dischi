@@ -1,0 +1,520 @@
+/* ||||| RESET E NORMALIZZAZIONE ||||| */
+/* <editor-fold */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    display: inline;
+    font-size: 1.1em;
+}
+
+h3 {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+h4 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+
+/* </editor-fold> */
+/* \\\\\ RESET E NORMALIZZAZIONE ///// */
+
+/* ||||| ALL DOC CLASSES ||||| */
+/* <editor-fold */
+.bold {
+    font-weight: bold;
+}
+
+/* </editor-fold> */
+/* \\\\\ ALL DOC CLASSES ///// */
+
+/* ||||| SYMBOLS ||||| */
+/* <editor-fold */
+.line {
+    width: 60px;
+    height: 2px;
+
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 1px;
+}
+
+#play .progress .line {
+    width: calc(100% - 25px - 25px);
+}
+
+.slidecontainer {
+    display: flex;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.progress .slidecontainer {
+    width: calc(100% - 25px - 25px);
+}
+
+.progress .slider {
+  width: 100%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 5px;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* </editor-fold> */
+/* \\\\\ SYMBOLS ///// */
+
+/* ||||| LINKS ||||| */
+/* <editor-fold */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#menu .list li {
+    margin-left: -15px;
+    padding-left: 15px;
+}
+
+#menu .list li:hover {
+    color: white;
+    box-shadow: -5px 0px 0px 0px lightgreen;
+}
+
+nav#content-menu a:hover {
+    color: rgb(255, 255, 255, 1);
+}
+
+nav#content-menu li:hover a::after {
+    display: block;
+}
+
+/* </editor-fold> */
+/* \\\\\ LINKS ///// */
+
+/* ||||| QUOTE ||||| */
+/* <editor-fold */
+
+/* </editor-fold> */
+/* \\\\\ END QUOTE ///// */
+
+/* ||||| BUTTONS ||||| */
+/* <editor-fold */
+
+/* </editor-fold> */
+/* \\\\\ BUTTONS ///// */
+
+
+/* ---------------- */
+/* ---------------- */
+/* ----- HTML ----- */
+/* ---------------- */
+/* ---------------- */
+
+#wrapper {
+    background: linear-gradient(135deg, rgb(162, 163, 3), rgb(0, 0, 0));
+}
+
+/* ||||| MAIN ||||| */
+/* <editor-fold */
+#screen-top {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/* ***** ASIDE ***** */
+/* #region */
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    background-color: rgb(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255, 0.6);
+
+    font-size: 14px;
+    vertical-align: middle;
+
+    padding: 20px;
+}
+
+#menu,
+#account {
+    text-align: center;
+}
+
+#menu *,
+#account * {
+    vertical-align: middle;
+}
+
+#menu .logo {
+    color: white;
+}
+
+#menu .list ul {
+    margin: 20px 0px 30px;
+}
+
+#screen-top .list li,
+#screen-top li {
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+#menu .list li:last-child {
+    margin-bottom: 0;
+}
+
+#menu .recent {
+    font-size: 12px;
+}
+
+#menu .recent span {
+    display: block;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+#account li:first-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+#account .user-icon {
+    font-weight: bold;
+}
+
+/* #endregion */
+/* ***** ASIDE ***** */
+
+/* ***** DIV.CONTENT ***** */
+/* #region */
+div#content {
+    flex-grow: 1;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+nav#content-menu {
+    text-align: left;
+
+    padding: 40px 0;
+}
+
+#content-menu li {
+    display: inline-block;
+    position: relative;
+
+    margin: 0;
+    margin-right: 20px;
+}
+
+#content-menu li:last-child {
+    margin-right: 0;
+}
+
+#content-menu a {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255, 0.6);
+
+    padding: 5px 10px;
+}
+
+#content-menu a::after {
+    content: "";
+    display: none;
+    width: 30px;
+    height: 1.5px;
+    background: lightgreen;
+
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#content section {
+    text-align: left;
+
+    margin-bottom: 40px;
+}
+
+#content section .card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 12px;
+}
+
+#content section .card {
+    flex-grow: 1; flex-basis: 120px;
+    text-align: center; font-size: 12px;
+    margin: 0 10px 20px;
+}
+
+#content section .card img {
+    display: block;
+    width: 100%;
+    max-width: 100px;
+
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+/* #endregion */
+/* ***** DIV.CONTENT ***** */
+
+/* </editor-fold> */
+/* \\\\\ END MAIN ///// */
+
+/* ||||| FOOTER ||||| */
+/* <editor-fold */
+#screen-btm {
+    display: flex;
+    justify-content: space-between;
+
+    height: 80px;
+    background-color: rgb(25,25,25);
+
+    color: rgb(255, 255, 255, 0.6);
+    font-size: 11px;
+
+    padding: 15px;
+}
+
+#playback {
+    display: flex;
+    align-items: center;
+}
+
+#playback > div {
+    display: inline-flex;
+}
+
+#playback > div:first-child {
+    margin-right: 20px;
+}
+
+#playback img {
+    width: 50px;
+}
+
+#playback span.bold {
+    font-size: 1.1em;
+}
+
+#play {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+
+    margin: 0 20px;
+}
+
+#play {
+    max-width: 400px;
+}
+
+#play .control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play .control i {
+    margin-right: 20px;
+}
+
+#play .control i:last-child {
+    margin-right: 0;
+}
+
+#play .progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#volume {
+    align-items: center;
+}
+
+#volume i {
+    margin-right: 10px;
+}
+
+/* </editor-fold> */
+/* \\\\\ END FOOTER ///// */
+
+/* ----------------------- */
+/* ----- MEDIA QUERY ----- */
+/* ----------------------- */
+
+
+#playback > div.d-none,
+.d-none {
+    display: none;
+}
+
+/* XS */
+@media screen and (min-width: 576px) {
+    /* ASIDE */
+    .d-sm-block {
+        display: block;
+    }
+
+    .d-sm-flex {
+        display: flex;
+    }
+
+    .d-sm-inline-block {
+        display: inline-block;
+    }
+
+    #menu,
+    #account {
+        text-align: left;
+    }
+
+    #screen-top i {
+        width: 30px;
+        text-align: center;
+    }
+
+    #screen-top .user-icon i {
+        margin-right: 10px;
+    }
+    /* FINE ASIDE */
+
+    /* MAIN CONTENT */
+    #content section .card {
+        flex-basis: 150px;
+    }
+
+    #content section .card img {
+        max-width: 150px;
+    }
+    /* FINE MAIN CONTENT */
+}
+/* SM */
+@media screen and (min-width: 768px) {
+    /* MAIN CONTENT */
+    .container {
+        max-width: 540px;
+    }
+
+    #content section .card {
+        flex-basis: 160px;
+        flex-grow: 0;
+    }
+    /* FINE MAIN CONTENT */
+}
+/* MD */
+@media screen and (min-width: 992px) {
+    .d-lg-block {
+        display: block;
+    }
+
+    .d-lg-none {
+        display: none;
+    }
+
+    #playback > div.d-none {
+        display: inline-block;
+
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    #playback > div:first-child {
+        margin-right: 0;
+    }
+
+    nav#content-menu {
+        text-align: center;
+
+        padding: 40px 0;
+    }
+
+    /* MAIN CONTENT */
+    .container {
+        max-width: 720px;
+    }
+
+    #content section .card {
+        width: 160px;
+    }
+    /* FINE MAIN CONTENT */
+}
+/* LG */
+@media screen and (min-width: 1200px) {
+    /* MAIN CONTENT */
+    .container {
+        max-width: 900px;
+    }
+    /* FINE MAIN CONTENT */
+}
+/* XL */

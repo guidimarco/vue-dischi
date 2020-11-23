@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>La musica per tutti | Spotify</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="https://www.scdn.co/i/_global/favicon.png">
+
+        <!-- font: tipo, weight -->
+
+        <!-- icone - fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+        <!-- responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS link -->
+        <!-- <link rel="stylesheet" href="css/12bool.css"> -->
+        <link rel="stylesheet" href="assets/style.css">
+
+        <!-- CDN AXIOS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+        <!-- CDN VUE -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script><!-- DEV VERSION -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> --><!-- DIST VERSION -->
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <!-- INIZIO PARTE SUPERIORE aside e contenuto -->
+            <main id="screen-top">
+                <aside>
+                    <!-- INIZIO PARTE SUPERIORE logo, barra di navigazione -->
+                    <nav id="menu">
+                        <div class="logo">
+                            <i class="fab fa-spotify fa-2x"></i>
+                            <h2 class="d-none d-sm-inline-block">Spotify</h2>
+                        </div>
+
+                        <div class="list">
+                            <!-- MENU -->
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-search"></i>
+                                        <span class="d-none d-sm-inline-block">Cerca</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-home"></i>
+                                        <span class="d-none d-sm-inline-block">Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-grip-lines-vertical"></i>
+                                        <span class="d-none d-sm-inline-block">La tua libreria</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="recent d-none d-sm-block">
+                            <p>
+                                <span>
+                                    Ascoltati di recente
+                                </span>
+                            </p>
+
+                            <!-- artista -->
+                            <p>
+                                AGGIORNARE
+                                <span>Artista</span>
+                            </p>
+                            <!-- playlist -->
+                            <p>
+                                AGGIORNARE
+                                <span>Playlist</span>
+                            </p>
+                        </div>
+                    </nav><!-- fine SUP menu -->
+
+                    <!-- PARTE INFERIORE inizio account -->
+                    <div id="account">
+                        <!-- MENU UTENTE -->
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="far fa-arrow-alt-circle-down"></i>
+                                    <span class="d-none d-sm-inline-block">Install App</span>
+                                </a>
+                            </li>
+                            <li class="user-icon">
+                                <a href="#">
+                                    <i class="far fa-user fa-2x"></i>
+                                    <span class="d-none d-sm-inline-block">w.lafdili</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- fine INF account -->
+                </aside><!-- FINE PARTE SINISTRA barra lat -->
+
+                <!-- INIZIO PARTE DESTRA musica -->
+                <div id="content">
+                    <div class="container">
+                        <!-- PARTE SUPERIORE menu a scomparsa -->
+                        <nav id="content-menu">
+                            <!-- MENU -->
+                            <ul class="d-none d-lg-block">
+                                <li>
+                                    <a href="#">
+                                        In evidenza
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Podcast
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Classifiche
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Generi e Mood
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Nuove uscite
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Scopri
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!-- HAMBURGER ICON\ -->
+                            <div class="d-lg-none">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </nav><!-- PARTE SUPERIORE menu -->
+
+                        <!-- PARTE INFERIORE album musicali -->
+                        <section>
+                            <h3>
+                                Creato per te
+                            </h3>
+
+                            <div class="card-container">
+                                <div class="card">
+                                    <img src="https://s.mxmcdn.net/images-storage/albums5/5/5/9/6/1/0/35016955_350_350.jpg" alt="drapth">
+                                    <h4>
+                                        title
+                                    </h4>
+                                    <span>
+                                        Autore, album e anno
+                                    </span>
+                                </div>
+
+                            </div><!-- END CARD-CONTAINER -->
+
+                        </section><!-- FINE CONTANITORE ALBUM -->
+                        <!-- FINE PARTE INFERIORE album -->
+
+                    </div>
+                </div>
+            </main><!-- FINE PARTE SUPERIORE aside e contenuto -->
+
+            <!-- INIZIO PARTE INFERIORE barra riproduzione -->
+            <footer id="screen-btm">
+                <div id="playback">
+                    <div>
+                        <img src="https://pbs.twimg.com/media/DicJYumUEAEJUM6.jpg" alt="hiltop hoods disc">
+                    </div>
+                    <div class="d-none">
+                        <span class="bold">Clark Griswold</span><br/>
+                        <span>Hiltop Hoods, Adrian Eagle</span>
+                    </div>
+                    <div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div><!-- FINE PARTE SX icona disco in ascolto-->
+
+                <!-- PARTE CENTRALE barra durata audio in ascolto -->
+                <div id="play">
+                    <div class="control">
+                        <i class="fas fa-random"></i>
+                        <i class="fas fa-step-backward"></i>
+                        <i class="far fa-pause-circle fa-2x"></i>
+                        <i class="fas fa-step-forward"></i>
+                        <i class="fas fa-undo"></i>
+                    </div><!-- FINE SUP area bottoni -->
+
+                    <!-- INIZIO INF area barra di scorrimento video -->
+                    <div class="progress">
+                        2:38
+                        <!-- <div class="line"></div> -->
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        </div>
+                        3:28
+                    </div>
+                </div><!-- FINE PARTE CENTRALE -->
+
+                <!-- parte DX volume -->
+                <div id="volume" class="d-none d-sm-flex">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-volume-up"></i>
+                    <!-- <div class="line"></div> -->
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                </div><!-- fine DX -->
+            </footer><!-- FINE PARTE INFERIORE barra riproduzione -->
+        </div>
+
+        <!-- javascript -->
+        <script type="text/javascript" src="assets/main.js"></script>
+    </body>
+</html>

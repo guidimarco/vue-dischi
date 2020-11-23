@@ -1,6 +1,7 @@
 var app = new Vue({ // VUE INSTANCE
     el: "#wrapper",
     data: {
+        currentDiscIndex: 0,
         discs: [],
     },
     methods: {

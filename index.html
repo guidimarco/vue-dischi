@@ -177,12 +177,12 @@
             <!-- INIZIO PARTE INFERIORE barra riproduzione -->
             <footer id="screen-btm">
                 <div id="playback">
-                    <div>
-                        <img src="https://pbs.twimg.com/media/DicJYumUEAEJUM6.jpg" alt="hiltop hoods disc">
+                    <div v-if="discs.length">
+                        <img :src="discs[currentDiscIndex].poster" :alt="discs[currentDiscIndex].title">
                     </div>
-                    <div class="d-none">
-                        <span class="bold">Clark Griswold</span><br/>
-                        <span>Hiltop Hoods, Adrian Eagle</span>
+                    <div class="d-none" v-if="discs.length">
+                        <span class="bold">{{ discs[currentDiscIndex].title }}</span><br/>
+                        <span>{{ discs[currentDiscIndex].author }}</span>
                     </div>
                     <div>
                         <i class="far fa-heart"></i>

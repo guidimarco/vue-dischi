@@ -2,8 +2,9 @@ var app = new Vue({ // VUE INSTANCE
     el: "#wrapper",
     data: {
         currentDiscIndex: 0,
-        discGenre: [],
         discs: [],
+        selectedGenre: "all",
+        discGenre: [],
     },
     methods: {
         getDiscs: function() {

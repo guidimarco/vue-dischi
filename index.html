@@ -63,11 +63,14 @@
                         </div>
 
                         <div class="genre d-none d-sm-block">
-                            <select>
+                            <select v-model="selectedGenre">
                                 <option value="all">All</option>
-                                <option value="all">Pop</option>
-                                <option value="all">Strong</option>
-                                <option value="all">Friz</option>
+
+                                <!-- generate genre option -->
+                                <option v-for="genre in discGenre"
+                                :value="genre">
+                                    {{ genre }}
+                                </option>
                             </select>
                         </div>
                     </nav><!-- fine SUP menu -->
@@ -144,7 +147,9 @@
                             </h3>
 
                             <div class="card-container">
-                                <div class="card" v-for="disc in discs">
+                                <div class="card"
+                                v-for="disc in discs"
+                                v-if="selectedGenre == disc.genre || selectedGenre == 'all'">
                                     <img :src="disc.poster" :alt="disc.title">
                                     <h4>
                                         {{ disc.title }}

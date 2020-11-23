@@ -213,16 +213,11 @@ aside {
     margin-bottom: 0;
 }
 
-#menu .recent {
+#menu .genre {
     font-size: 12px;
 }
-
-#menu .recent span {
-    display: block;
-
-    text-transform: uppercase;
-
-    margin-bottom: 10px;
+#menu .genre select {
+    width: 100%;
 }
 
 #account li:first-child {

@@ -16,6 +16,9 @@ var app = new Vue({ // VUE INSTANCE
 
                     // get GENRE for each disc and save into this discGenre
                     this.getDiscGenre();
+
+                    // sort the array in order to disc.year
+                    this.sortDiscs();
                 })
             ;
         },
@@ -28,6 +31,11 @@ var app = new Vue({ // VUE INSTANCE
                     this.discGenre.push(currentGenre);
                 }
 
+            });
+        },
+        sortDiscs: function() {
+            this.discs.sort( (a, b) => {
+                return a.year - b.year;
             });
         },
     },

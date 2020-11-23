@@ -148,9 +148,10 @@
 
                             <div class="card-container">
                                 <div class="card"
-                                v-for="disc in discs"
+                                v-for="(disc, index) in discs"
                                 v-if="selectedGenre == disc.genre || selectedGenre == 'all'">
-                                    <img :src="disc.poster" :alt="disc.title">
+                                    <img :src="disc.poster" :alt="disc.title"
+                                    @error="posterNotFound(index)">
                                     <h4>
                                         {{ disc.title }}
                                     </h4>

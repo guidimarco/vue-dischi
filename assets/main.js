@@ -38,6 +38,11 @@ var app = new Vue({ // VUE INSTANCE
                 return a.year - b.year;
             });
         },
+        posterNotFound: function(discIndex) {
+            let srcPosterNotFound = "https://img.whaleshares.io/wls-img/einstei1/d765e65f432e7e6f0d062616d19364ecdc5631da.png";
+
+            this.discs[discIndex].poster = srcPosterNotFound;
+        },
     },
     mounted() {
         this.getDiscs();
